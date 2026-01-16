@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио Господина Дастана</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+        body {
+            background: linear-gradient(135deg, #fff5f7 0%, #fce4ec 50%, #f8bbd0 100%);
+            min-height: 100vh;
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px 0 rgba(255, 182, 193, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 45px rgba(255, 105, 180, 0.2);
+        }
+
+        .fade-in {
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .pink-gradient-text {
+            background: linear-gradient(45deg, #ff4d6d, #ff85a1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-fancy {
+            background: linear-gradient(45deg, #ff758f, #ffb3c1);
+            color: white;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 117, 143, 0.3);
+        }
+
+        .btn-fancy:hover {
+            filter: brightness(1.1);
+            box-shadow: 0 6px 20px rgba(255, 117, 143, 0.5);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="text-gray-700">
+
+    <nav class="p-8 flex justify-between items-center max-w-6xl mx-auto">
+        <div class="text-2xl font-bold pink-gradient-text tracking-tighter">DASTAN.DEV</div>
+        <a href="mailto:dastankurmanbaev97@gmail.com" class="text-sm font-medium hover:text-pink-600 transition">Контакты</a>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        
+        <section class="text-center mb-20 fade-in">
+            <div class="relative inline-block mb-6">
+                <div class="absolute inset-0 bg-pink-300 rounded-full blur-2xl opacity-30 animate-pulse"></div>
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Dastan" alt="Avatar" class="relative rounded-full w-40 h-40 border-4 border-white shadow-xl">
+            </div>
+            
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-4">
+                <span class="text-gray-800">Господин</span> <span class="pink-gradient-text">Дастан</span>
+            </h1>
+            
+            <p class="text-xl text-gray-500 max-w-2xl mx-auto mb-8">
+                Добро пожаловать в мою цифровую галерею. Я создаю проекты, которые сочетают в себе чистоту кода и эстетику дизайна.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#projects" class="btn-fancy px-8 py-3 rounded-full font-bold text-lg">Мои работы</a>
+                <a href="mailto:dastankurmanbaev97@gmail.com" class="bg-white text-pink-500 border-2 border-pink-200 px-8 py-3 rounded-full font-bold text-lg hover:bg-pink-50 transition">Написать мне</a>
+            </div>
+        </section>
+
+        <h2 id="projects" class="text-3xl font-bold text-center mb-12 text-gray-800">Портфолио</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <div class="glass-card p-2 rounded-[2rem]">
+                <div class="bg-pink-100 rounded-[1.8rem] h-48 mb-4 flex items-center justify-center text-6xl">💻</div>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold mb-2">Web Application</h3>
+                    <p class="text-gray-500 text-sm mb-6">Инновационное решение для управления задачами. Чистый интерфейс и мощный функционал.</p>
+                    <a href="#" class="text-pink-500 font-bold hover:underline">Подробнее →</a>
+                </div>
+            </div>
+
+            <div class="glass-card p-2 rounded-[2rem]">
+                <div class="bg-white rounded-[1.8rem] h-48 mb-4 flex items-center justify-center text-6xl">📱</div>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold mb-2">Mobile Design</h3>
+                    <p class="text-gray-500 text-sm mb-6">Концепт мобильного приложения в стиле минимализма для современных пользователей.</p>
+                    <a href="#" class="text-pink-500 font-bold hover:underline">Подробнее →</a>
+                </div>
+            </div>
+
+            <div class="glass-card p-2 rounded-[2rem]">
+                <div class="bg-pink-50 rounded-[1.8rem] h-48 mb-4 flex items-center justify-center text-6xl">🚀</div>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold mb-2">Backend System</h3>
+                    <p class="text-gray-500 text-sm mb-6">Архитектура серверной части для высоконагруженных сервисов и баз данных.</p>
+                    <a href="#" class="text-pink-500 font-bold hover:underline">Подробнее →</a>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="mt-32 glass-card rounded-[3rem] p-12 text-center fade-in">
+            <h2 class="text-3xl font-bold mb-4">Сотрудничество</h2>
+            <p class="mb-8 text-gray-600">Готовы начать новый проект? Напишите мне на почту!</p>
+            <a href="mailto:dastankurmanbaev97@gmail.com" class="text-2xl font-bold pink-gradient-text border-b-2 border-pink-200 hover:border-pink-500 transition pb-2">
+                dastankurmanbaev97@gmail.com
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-12 text-gray-400">
+        <p>© 2024 Господин Дастан. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
